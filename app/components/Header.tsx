@@ -20,7 +20,7 @@ export default function Header() {
           <h1 className="font-bold text-xl">
             <Link
               href="/"
-              className="text-green-700"
+              className="text-green-600"
               title="Clicketpaf Homepage"
             >
               Clicketpaf
