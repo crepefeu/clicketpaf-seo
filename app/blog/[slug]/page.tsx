@@ -3,28 +3,45 @@ import { getArticleBySlug } from "@/app/lib/articleUtils";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { Metadata } from "next";
 import { JsonLd } from "@/app/components/JsonLd";
+import Link from "next/link";
 
 export async function generateMetadata({
-  params,
+  params: paramsPromise, // Rename to indicate it's a promise
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const article = await getArticleBySlug(params.slug);
+  try {
+    const { slug } = await paramsPromise; // Await and destructure
+    const article = await getArticleBySlug(slug);
 
-  return {
-    title: article.title,
-    description: article.description,
-    alternates: {
-      canonical: `/blog/${article.slug}`,
-    },
-    openGraph: {
+    if (!article) {
+      return {
+        title: "Article not found",
+        description: "The requested article could not be found",
+      };
+    }
+
+    return {
       title: article.title,
       description: article.description,
-      type: "article",
-      publishedTime: article.date,
-      authors: [article.author],
-    },
-  };
+      alternates: {
+        canonical: `/blog/${article.slug}`,
+      },
+      openGraph: {
+        title: article.title,
+        description: article.description,
+        type: "article",
+        publishedTime: article.date,
+        authors: [article.author],
+      },
+    };
+  } catch (error) {
+    console.error("Error generating metadata:", error);
+    return {
+      title: "Error",
+      description: "An error occurred",
+    };
+  }
 }
 
 const SectionRenderer = ({ section }: { section: Section }) => {
@@ -84,55 +101,66 @@ const SectionRenderer = ({ section }: { section: Section }) => {
 };
 
 export default async function Page({
-  params,
+  params: paramsPromise,
 }: {
   params: Promise<{ slug: string }>;
 }) {
-  const slug = (await params).slug;
-  const article = getArticleBySlug(slug);
+  try {
+    const { slug } = await paramsPromise;
+    const article = await getArticleBySlug(slug);
 
-  const articleStructuredData = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.description,
-    author: {
-      "@type": "Person",
-      name: article.author,
-    },
-    datePublished: article.date,
-  };
+    if (!article) {
+      return <div className="text-center py-10">Article not found</div>;
+    }
 
-  if (!article) return <h1>Article not found</h1>;
+    const articleStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.description,
+      author: {
+        "@type": "Person",
+        name: article.author,
+      },
+      datePublished: article.date,
+    };
 
-  return (
-    <article className="">
-      <JsonLd data={articleStructuredData} />
-      <Breadcrumbs
-        items={[
-          { label: "Accueil", path: "/" },
-          { label: "Articles", path: "/blog" },
-          { label: article.title, path: `/blog/${article.slug}` },
-        ]}
-      />
-      <header className="">
-        <h1 className="text-green-700 text-[40px] font-bold">
-          {article.title}
-        </h1>
-        <div className="flex items-center gap-3 text-gray-500 text-sm font-bold h-6">
-          <time>Publié le {new Date(article.date).toLocaleDateString()}</time>
-          <div className="w-[2px] h-full bg-green-600"></div>
-          <span>Auteur : {article.author}</span>
-          <div className="w-[2px] h-full bg-green-600"></div>
-          <span>Temps de lecture : {article.metadata.readingTime}</span>
+    return (
+      <article className="max-w-3xl mx-auto px-4">
+        <JsonLd data={articleStructuredData} />
+        <Breadcrumbs
+          items={[
+            { label: "Accueil", path: "/" },
+            { label: "Articles", path: "/blog" },
+            { label: article.title, path: `/blog/${article.slug}` },
+          ]}
+        />
+        <header className="mb-8">
+          <h1 className="text-4xl font-bold text-green-700 mb-4">
+            {article.title}
+          </h1>
+          <div className="flex items-center gap-3 text-sm text-gray-500">
+            <time>{new Date(article.date).toLocaleDateString()}</time>
+            <span>•</span>
+            <span>{article.author}</span>
+          </div>
+        </header>
+        <div className="prose prose-green max-w-none">
+          {article.sections.map((section, index) => (
+            <SectionRenderer key={index} section={section} />
+          ))}
         </div>
-      </header>
-
-      <div className="mt-8">
-        {article.sections.map((section, index) => (
-          <SectionRenderer key={index} section={section} />
-        ))}
+      </article>
+    );
+  } catch (error) {
+    console.error("Error loading article:", error);
+    return (
+      <div>
+        <div className="text-center py-10">
+          Nous avons rencontré une erreur en essayant de charger l'article
+        </div>
+        <Link href="/blog">Retour à la liste des articles</Link>
       </div>
-    </article>
-  );
+    );
+  }
 }
