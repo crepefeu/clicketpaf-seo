@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from 'next/font/google'
+import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
- 
+
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Clicketpaf',
-  description: 'Clicketpaf le paiement simplifié. Chaque transaction devient une formalité : vous cliquez, et… PAF, tout est réglé.',
+  title: "Clicketpaf",
+  description:
+    "Clicketpaf le paiement simplifié. Chaque transaction devient une formalité : vous cliquez, et… PAF, tout est réglé.",
   openGraph: {
-    title: 'Clicketpaf',
-    description: 'Clicketpaf le paiement simplifié',
-    type: 'website',
+    title: "Clicketpaf",
+    description: "Clicketpaf le paiement simplifié",
+    type: "website",
   },
 };
 
@@ -24,11 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased`}
-      >
+      <body className={`${inter.className} antialiased bg-white text-gray-900`}>
         <Header />
-        {children}
+        <div className="py-20 px-32 min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>
