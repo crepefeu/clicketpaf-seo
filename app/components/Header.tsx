@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <>
       <header
-        className="sticky top-4 mx-auto bg-green-100/40 border border-green-400 text-white p-3 px-6 rounded-full w-[80vw] z-20"
+        className="sticky top-4 mx-auto bg-green-100/40 border border-green-400 text-white p-3 px-6 rounded-full w-[70vw] lg:w-[40vw] z-20"
         role="banner"
         style={{
           backdropFilter: "blur(10px)",
@@ -69,7 +69,7 @@ export default function Header() {
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 stroke-green-600"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -88,7 +88,7 @@ export default function Header() {
       {/* Mobile Navigation - Sliding from top */}
       <nav
         id="mobile-menu"
-        className={`fixed top-0 left-0 w-full h-screen bg-gray-800/95 backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:hidden z-10 ${
+        className={`fixed top-0 left-0 w-full h-screen bg-white backdrop-blur-sm transform transition-transform duration-300 ease-in-out lg:hidden z-10 ${
           isOpen ? "translate-y-0" : "-translate-y-full"
         }`}
         aria-label="Mobile navigation"
@@ -96,22 +96,23 @@ export default function Header() {
         itemScope={true}
         itemType="https://schema.org/SiteNavigationElement"
       >
-        <ul className="flex flex-col gap-6 p-8 pt-28">
+        <ul className="flex flex-col gap-6 p-8 pt-28 text-green-600 font-semibold">
           <li itemProp="name">
             <Link
-              href="/"
+              href="/blog"
               itemProp="url"
-              className="block text-xl hover:text-gray-300"
+              className="block text-xl hover:text-green-700"
               aria-current="page"
+              onClick={() => setIsOpen(false)}
             >
-              Home
+              Blog
             </Link>
           </li>
           <li itemProp="name">
             <Link
               href="/about"
               itemProp="url"
-              className="block text-xl hover:text-gray-300"
+              className="block text-xl hover:text-green-700"
             >
               About
             </Link>
@@ -120,7 +121,8 @@ export default function Header() {
             <Link
               href="/services"
               itemProp="url"
-              className="block text-xl hover:text-gray-300"
+              className="block text-xl hover:text-green-700"
+              onClick={() => setIsOpen(false)}
             >
               Services
             </Link>
@@ -129,7 +131,8 @@ export default function Header() {
             <Link
               href="/contact"
               itemProp="url"
-              className="block text-xl hover:text-gray-300"
+              className="block text-xl hover:text-green-700"
+              onClick={() => setIsOpen(false)}
             >
               Contact
             </Link>

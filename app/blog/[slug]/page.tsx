@@ -4,6 +4,7 @@ import Breadcrumbs from "@/app/components/Breadcrumbs";
 import { Metadata } from "next";
 import { JsonLd } from "@/app/components/JsonLd";
 import Link from "next/link";
+import NotFound from "@/app/not-found";
 
 export async function generateMetadata({
   params: paramsPromise, // Rename to indicate it's a promise
@@ -110,7 +111,7 @@ export default async function Page({
     const article = await getArticleBySlug(slug);
 
     if (!article) {
-      return <div className="text-center py-10">Article not found</div>;
+      return <NotFound redirect="/blog" />;
     }
 
     const articleStructuredData = {
@@ -126,7 +127,7 @@ export default async function Page({
     };
 
     return (
-      <article className="max-w-3xl mx-auto px-4">
+      <article className="mx-auto">
         <JsonLd data={articleStructuredData} />
         <Breadcrumbs
           items={[
@@ -139,10 +140,12 @@ export default async function Page({
           <h1 className="text-4xl font-bold text-green-700 mb-4">
             {article.title}
           </h1>
-          <div className="flex items-center gap-3 text-sm text-gray-500">
-            <time>{new Date(article.date).toLocaleDateString()}</time>
-            <span>•</span>
-            <span>{article.author}</span>
+          <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-3 text-sm text-gray-500">
+            <time>Publié le {new Date(article.date).toLocaleDateString()}</time>
+            <span className="text-green-600 hidden lg:block">•</span>
+            <span>Auteur : {article.author}</span>
+            <span className="text-green-600 hidden lg:block">•</span>
+            <span>Temps de lecture : {article.metadata.readingTime}</span>
           </div>
         </header>
         <div className="prose prose-green max-w-none">
