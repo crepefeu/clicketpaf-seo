@@ -1,12 +1,31 @@
 import Link from "next/link";
 import { getAllArticles } from "@/app/lib/articleUtils";
 import Breadcrumbs from "../components/Breadcrumbs";
+import { Metadata } from "next";
+import { JsonLd } from "../components/JsonLd";
+
+export const metadata: Metadata = {
+  title: "Articles",
+  description:
+    "Découvrez nos articles sur le paiement en ligne et les innovations fintech",
+  alternates: {
+    canonical: "/blog",
+  },
+};
 
 export default async function Page() {
   const articles = getAllArticles();
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Blog Clicketpaf",
+    description: "Articles sur le paiement en ligne et les innovations fintech",
+  };
+
   return (
     <div className="">
+      <JsonLd data={structuredData} />
       <Breadcrumbs
         items={[
           { label: "Accueil", path: "/" },

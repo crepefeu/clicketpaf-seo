@@ -8,13 +8,30 @@ import Header from "./components/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Clicketpaf",
+  metadataBase: new URL("https://clicketpaf.fr"),
+  title: {
+    default: "Clicketpaf - Paiement Simplifié",
+    template: "%s | Clicketpaf",
+  },
   description:
     "Clicketpaf le paiement simplifié. Chaque transaction devient une formalité : vous cliquez, et… PAF, tout est réglé.",
   openGraph: {
-    title: "Clicketpaf",
+    title: "Clicketpaf - Paiement Simplifié",
     description: "Clicketpaf le paiement simplifié",
     type: "website",
+    locale: "fr_FR",
+    siteName: "Clicketpaf",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

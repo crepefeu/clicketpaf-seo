@@ -1,6 +1,31 @@
 import { Section } from "@/app/types/article";
 import { getArticleBySlug } from "@/app/lib/articleUtils";
 import Breadcrumbs from "@/app/components/Breadcrumbs";
+import { Metadata } from "next";
+import { JsonLd } from "@/app/components/JsonLd";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const article = await getArticleBySlug(params.slug);
+
+  return {
+    title: article.title,
+    description: article.description,
+    alternates: {
+      canonical: `/blog/${article.slug}`,
+    },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      type: "article",
+      publishedTime: article.date,
+      authors: [article.author],
+    },
+  };
+}
 
 const SectionRenderer = ({ section }: { section: Section }) => {
   switch (section.type) {
@@ -66,10 +91,23 @@ export default async function Page({
   const slug = (await params).slug;
   const article = getArticleBySlug(slug);
 
+  const articleStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.description,
+    author: {
+      "@type": "Person",
+      name: article.author,
+    },
+    datePublished: article.date,
+  };
+
   if (!article) return <h1>Article not found</h1>;
 
   return (
     <article className="">
+      <JsonLd data={articleStructuredData} />
       <Breadcrumbs
         items={[
           { label: "Accueil", path: "/" },
