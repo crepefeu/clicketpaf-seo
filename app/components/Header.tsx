@@ -20,7 +20,7 @@ export default function Header() {
           <h1 className="font-bold text-xl">
             <Link
               href="/"
-              className="text-green-500"
+              className="text-green-700"
               title="Clicketpaf Homepage"
             >
               Clicketpaf
@@ -35,7 +35,7 @@ export default function Header() {
             itemScope={true}
             itemType="https://schema.org/SiteNavigationElement"
           >
-            <ul className="flex gap-6 text-green-500">
+            <ul className="flex gap-6 text-green-600">
               <li itemProp="name">
                 <Link
                   href="/blog"
