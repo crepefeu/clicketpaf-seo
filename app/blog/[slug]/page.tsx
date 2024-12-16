@@ -157,7 +157,7 @@ export default async function Page({
     return (
       <div>
         <div className="text-center py-10">
-          Nous avons rencontré une erreur en essayant de charger l'article
+          Nous avons rencontré une erreur en essayant de charger l&apos;article
         </div>
         <Link href="/blog">Retour à la liste des articles</Link>
       </div>
