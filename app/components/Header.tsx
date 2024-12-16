@@ -48,7 +48,7 @@ export default function Header() {
               </li>
               <li itemProp="name">
                 <Link
-                  href="/blog"
+                  href="/about"
                   itemProp="url"
                   className="group relative font-semibold"
                 >
