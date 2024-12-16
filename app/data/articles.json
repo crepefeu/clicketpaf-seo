@@ -42,6 +42,221 @@
                 "readingTime": "3 min",
                 "category": "Technologie"
             }
+        },
+        {
+            "id": 2,
+            "title": "La révolution du paiement en un clic",
+            "slug": "revolution-paiement-un-clic",
+            "description": "Découvrez comment Clicketpaf transforme l'expérience de paiement",
+            "date": "2024-03-20",
+            "author": "John Doe",
+            "sections": [
+                {
+                    "type": "heading",
+                    "content": "Introduction",
+                    "level": 2
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Il était une fois un monde où payer signifiait perdre du temps.",
+                    "style": "lead"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Nous avons tous vécu ces moments où une simple transaction devient un casse-tête. Clicketpaf est né d’une idée simple mais ambitieuse : transformer les paiements du quotidien en une expérience rapide, fluide et même agréable. Avec Clicketpaf, chaque transaction devient une aventure : vous cliquez, et… PAF, tout est réglé."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Compter la monnaie",
+                        "Attendre en file",
+                        "Saisir des codes compliqués"
+                    ],
+                    "style": "bullet"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Clicketpaf est né d'une idée simple mais ambitieuse",
+                    "emphasis": true
+                }
+            ],
+            "metadata": {
+                "keywords": ["paiement", "innovation", "technologie"],
+                "readingTime": "3 min",
+                "category": "Technologie"
+            }
+        },
+        {
+            "id": 3,
+            "title": "La révolution du paiement en un clic",
+            "slug": "revolution-paiement-un-clic",
+            "description": "Découvrez comment Clicketpaf transforme l'expérience de paiement",
+            "date": "2024-03-20",
+            "author": "John Doe",
+            "sections": [
+                {
+                    "type": "heading",
+                    "content": "Introduction",
+                    "level": 2
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Il était une fois un monde où payer signifiait perdre du temps.",
+                    "style": "lead"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Nous avons tous vécu ces moments où une simple transaction devient un casse-tête. Clicketpaf est né d’une idée simple mais ambitieuse : transformer les paiements du quotidien en une expérience rapide, fluide et même agréable. Avec Clicketpaf, chaque transaction devient une aventure : vous cliquez, et… PAF, tout est réglé."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Compter la monnaie",
+                        "Attendre en file",
+                        "Saisir des codes compliqués"
+                    ],
+                    "style": "bullet"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Clicketpaf est né d'une idée simple mais ambitieuse",
+                    "emphasis": true
+                }
+            ],
+            "metadata": {
+                "keywords": ["paiement", "innovation", "technologie"],
+                "readingTime": "3 min",
+                "category": "Technologie"
+            }
+        },
+        {
+            "id": 4,
+            "title": "La révolution du paiement en un clic",
+            "slug": "revolution-paiement-un-clic",
+            "description": "Découvrez comment Clicketpaf transforme l'expérience de paiement",
+            "date": "2024-03-20",
+            "author": "John Doe",
+            "sections": [
+                {
+                    "type": "heading",
+                    "content": "Introduction",
+                    "level": 2
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Il était une fois un monde où payer signifiait perdre du temps.",
+                    "style": "lead"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Nous avons tous vécu ces moments où une simple transaction devient un casse-tête. Clicketpaf est né d’une idée simple mais ambitieuse : transformer les paiements du quotidien en une expérience rapide, fluide et même agréable. Avec Clicketpaf, chaque transaction devient une aventure : vous cliquez, et… PAF, tout est réglé."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Compter la monnaie",
+                        "Attendre en file",
+                        "Saisir des codes compliqués"
+                    ],
+                    "style": "bullet"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Clicketpaf est né d'une idée simple mais ambitieuse",
+                    "emphasis": true
+                }
+            ],
+            "metadata": {
+                "keywords": ["paiement", "innovation", "technologie"],
+                "readingTime": "3 min",
+                "category": "Technologie"
+            }
+        },
+        {
+            "id": 5,
+            "title": "La révolution du paiement en un clic",
+            "slug": "revolution-paiement-un-clic",
+            "description": "Découvrez comment Clicketpaf transforme l'expérience de paiement",
+            "date": "2024-03-20",
+            "author": "John Doe",
+            "sections": [
+                {
+                    "type": "heading",
+                    "content": "Introduction",
+                    "level": 2
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Il était une fois un monde où payer signifiait perdre du temps.",
+                    "style": "lead"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Nous avons tous vécu ces moments où une simple transaction devient un casse-tête. Clicketpaf est né d’une idée simple mais ambitieuse : transformer les paiements du quotidien en une expérience rapide, fluide et même agréable. Avec Clicketpaf, chaque transaction devient une aventure : vous cliquez, et… PAF, tout est réglé."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Compter la monnaie",
+                        "Attendre en file",
+                        "Saisir des codes compliqués"
+                    ],
+                    "style": "bullet"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Clicketpaf est né d'une idée simple mais ambitieuse",
+                    "emphasis": true
+                }
+            ],
+            "metadata": {
+                "keywords": ["paiement", "innovation", "technologie"],
+                "readingTime": "3 min",
+                "category": "Technologie"
+            }
+        },
+        {
+            "id": 6,
+            "title": "La révolution du paiement en un clic",
+            "slug": "revolution-paiement-un-clic",
+            "description": "Découvrez comment Clicketpaf transforme l'expérience de paiement",
+            "date": "2024-03-20",
+            "author": "John Doe",
+            "sections": [
+                {
+                    "type": "heading",
+                    "content": "Introduction",
+                    "level": 2
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Il était une fois un monde où payer signifiait perdre du temps.",
+                    "style": "lead"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Nous avons tous vécu ces moments où une simple transaction devient un casse-tête. Clicketpaf est né d’une idée simple mais ambitieuse : transformer les paiements du quotidien en une expérience rapide, fluide et même agréable. Avec Clicketpaf, chaque transaction devient une aventure : vous cliquez, et… PAF, tout est réglé."
+                },
+                {
+                    "type": "list",
+                    "items": [
+                        "Compter la monnaie",
+                        "Attendre en file",
+                        "Saisir des codes compliqués"
+                    ],
+                    "style": "bullet"
+                },
+                {
+                    "type": "paragraph",
+                    "content": "Clicketpaf est né d'une idée simple mais ambitieuse",
+                    "emphasis": true
+                }
+            ],
+            "metadata": {
+                "keywords": ["paiement", "innovation", "technologie"],
+                "readingTime": "3 min",
+                "category": "Technologie"
+            }
         }
     ]
 }

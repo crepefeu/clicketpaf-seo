@@ -1,5 +1,6 @@
 import { Section } from "@/app/types/article";
-import { getArticleById } from "@/app/lib/articleUtils";
+import { getArticleBySlug } from "@/app/lib/articleUtils";
+import Breadcrumbs from "@/app/components/Breadcrumbs";
 
 const SectionRenderer = ({ section }: { section: Section }) => {
   switch (section.type) {
@@ -15,7 +16,9 @@ const SectionRenderer = ({ section }: { section: Section }) => {
       return (
         <p
           className={`mt-4
-          ${section.style === "lead" ? "text-green-600 font-medium text-lg" : ""}
+          ${
+            section.style === "lead" ? "text-green-600 font-medium text-lg" : ""
+          }
           ${section.emphasis ? "text-green-500 font-medium" : ""}`}
         >
           {section.content}
@@ -58,15 +61,22 @@ const SectionRenderer = ({ section }: { section: Section }) => {
 export default async function Page({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const id = (await params).id;
-  const article = getArticleById(parseInt(id, 10));
+  const slug = (await params).slug;
+  const article = getArticleBySlug(slug);
 
   if (!article) return <h1>Article not found</h1>;
 
   return (
     <article className="">
+      <Breadcrumbs
+        items={[
+          { label: "Accueil", path: "/" },
+          { label: "Articles", path: "/blog" },
+          { label: article.title, path: `/blog/${article.slug}` },
+        ]}
+      />
       <header className="">
         <h1 className="text-green-700 text-[40px] font-bold">
           {article.title}
