@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Clicketpaf',
-  description: 'Clicketpaf le paiement simplifié',
+  description: 'Clicketpaf le paiement simplifié. Chaque transaction devient une formalité : vous cliquez, et… PAF, tout est réglé.',
   openGraph: {
     title: 'Clicketpaf',
     description: 'Clicketpaf le paiement simplifié',
