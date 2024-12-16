@@ -44,7 +44,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} antialiased bg-white text-gray-900`}>
         <Header />
-        <div className="py-16 px-32 min-h-screen">{children}</div>
+        <div className="py-16 px-6 lg:px-32 min-h-screen">{children}</div>
         <Footer />
       </body>
     </html>
