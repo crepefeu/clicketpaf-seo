@@ -25,8 +25,19 @@ export default async function Image({ params }: { params: { slug: string } }) {
             justifyContent: "center",
           }}
         >
+          <h1
+            style={{
+              fontSize: "60px",
+              color: "#15803d",
+              textAlign: "center",
+              marginBottom: "20px",
+              fontWeight: "bold",
+            }}
+          >
+            Clicketpaf - Le paiement en ligne simplifié
+          </h1>
           <p style={{ color: "#15803d", fontSize: "48px" }}>
-            Article not found
+            Article introuvable
           </p>
         </div>
       )
@@ -49,7 +60,6 @@ export default async function Image({ params }: { params: { slug: string } }) {
           style={{
             fontSize: "60px",
             color: "#15803d",
-            textAlign: "center",
             marginBottom: "20px",
             fontWeight: "bold",
           }}
@@ -61,7 +71,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: "20px",
+            gap: "10px",
           }}
         >
           <h1
