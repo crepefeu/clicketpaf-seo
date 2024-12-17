@@ -37,7 +37,7 @@ export default async function Page() {
         {articles.map((article) => (
           <article
             key={article.id}
-            className="bg-white hover:bg-green-100/25 border-[1.5px] border-green-500 p-4 rounded-lg transition-colors"
+            className="bg-white hover:bg-green-100/25 border-[1.5px] border-gray-400 hover:border-green-500 p-4 rounded-lg cursor-pointer transition-colors"
           >
             <Link href={`/blog/${article.slug}`}>
               <h2 className="text-xl text-green-700 font-semibold">

@@ -16,8 +16,8 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">
           <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
             Révolutionnez vos paiements en ligne avec une simplicité{" "}
-            <span className="relative bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text">
-              inégalée.
+            <span className="relative text-green-700 underline">
+              inégalée
             </span>
           </span>
         </h1>
