@@ -20,7 +20,7 @@ export default function Header() {
           <h1 className="font-bold text-xl">
             <Link
               href="/"
-              className="text-green-600"
+              className="text-green-700"
               title="Clicketpaf Homepage"
             >
               Clicketpaf
@@ -35,7 +35,7 @@ export default function Header() {
             itemScope={true}
             itemType="https://schema.org/SiteNavigationElement"
           >
-            <ul className="flex gap-6 text-green-600">
+            <ul className="flex gap-6 text-green-700">
               <li itemProp="name">
                 <Link
                   href="/blog"
@@ -48,11 +48,11 @@ export default function Header() {
               </li>
               <li itemProp="name">
                 <Link
-                  href="/about"
+                  href="/a-propos"
                   itemProp="url"
                   className="group relative font-semibold"
                 >
-                  A propos
+                  À propos
                   <div className="absolute top-[20px] w-0 h-[3px] bg-green-500/50 rounded-full transition-all duration-300 group-hover:w-full" />
                 </Link>
               </li>
@@ -96,7 +96,7 @@ export default function Header() {
         itemScope={true}
         itemType="https://schema.org/SiteNavigationElement"
       >
-        <ul className="flex flex-col gap-6 p-8 pt-28 text-green-600 font-semibold">
+        <ul className="flex flex-col gap-6 p-8 pt-28 text-green-700 font-semibold">
           <li itemProp="name">
             <Link
               href="/blog"
@@ -110,11 +110,11 @@ export default function Header() {
           </li>
           <li itemProp="name">
             <Link
-              href="/about"
+              href="/a-propos"
               itemProp="url"
               className="block text-xl hover:text-green-700"
             >
-              About
+              À propos
             </Link>
           </li>
           <li itemProp="name">

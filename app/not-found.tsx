@@ -11,7 +11,7 @@ export default function NotFound(
   return (
     <div className="absolute left-0 top-0 flex gap-8 flex-col justify-center items-center w-screen h-screen">
       <div className="flex flex-col gap-2 text-center text-xl">
-        <h2 className="text-green-600 font-semibold">Page introuvable</h2>
+        <h2 className="text-green-700 font-semibold">Page introuvable</h2>
         <p>Désolé, nous n&apos;avons pas trouvé la page que vous cherchiez.</p>
       </div>
       <div>

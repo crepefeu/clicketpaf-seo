@@ -32,7 +32,7 @@ export default async function Page() {
           { label: "Articles", path: "/blog" },
         ]}
       />
-      <h1 className="text-green-600 font-semibold text-2xl">Articles</h1>
+      <h1 className="text-green-700 font-semibold text-2xl">Articles</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-5">
         {articles.map((article) => (
           <article
@@ -40,7 +40,7 @@ export default async function Page() {
             className="bg-white hover:bg-green-100/25 border-[1.5px] border-green-500 p-4 rounded-lg transition-colors"
           >
             <Link href={`/blog/${article.slug}`}>
-              <h2 className="text-xl text-green-600 font-semibold">
+              <h2 className="text-xl text-green-700 font-semibold">
                 {article.title}
               </h2>
               <p className="text-gray-900 mt-2">{article.description}</p>

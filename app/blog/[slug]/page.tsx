@@ -50,7 +50,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
     case "heading":
       const HeadingTag = `h${section.level}` as keyof JSX.IntrinsicElements;
       return (
-        <HeadingTag className="text-green-600 font-semibold text-[28px]">
+        <HeadingTag className="text-green-700 font-semibold text-[28px]">
           {section.content}
         </HeadingTag>
       );
@@ -60,7 +60,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
         <p
           className={`mt-4
           ${
-            section.style === "lead" ? "text-green-600 font-medium text-lg" : ""
+            section.style === "lead" ? "text-green-700 font-medium text-lg" : ""
           }
           ${section.emphasis ? "text-green-500 font-medium" : ""}`}
         >
@@ -142,9 +142,9 @@ export default async function Page({
           </h1>
           <div className="flex flex-col lg:flex-row lg:items-center gap-1 lg:gap-3 text-sm text-gray-500">
             <time>Publié le {new Date(article.date).toLocaleDateString()}</time>
-            <span className="text-green-600 hidden lg:block">•</span>
+            <span className="text-green-700 hidden lg:block">•</span>
             <span>Auteur : {article.author}</span>
-            <span className="text-green-600 hidden lg:block">•</span>
+            <span className="text-green-700 hidden lg:block">•</span>
             <span>Temps de lecture : {article.metadata.readingTime}</span>
           </div>
         </header>

@@ -7,14 +7,14 @@ export default async function Page() {
       <Breadcrumbs
         items={[
           { label: "Accueil", path: "/" },
-          { label: "À propos", path: "/about" },
+          { label: "À propos", path: "/a-propos" },
         ]}
       />
-      <h1 className="text-green-600 font-semibold text-2xl">
+      <h1 className="text-green-700 font-semibold text-2xl">
         À propos de ClickEtPaf
       </h1>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           ClicketPaf : une vision audacieuse, une révolution du paiement
         </h2>
         <p className="text-gray-900 mt-2">
@@ -28,7 +28,8 @@ export default async function Page() {
         </p>
         <Blockquote
           quote="Nous voulions offrir une expérience de paiement qui ne soit pas seulement fonctionnelle, mais aussi fluide et agréable"
-          author="explique Emma Dupont, notre co-fondatrice et directrice technique"
+          authorMsg="Explique Emma Dupont, notre co-fondatrice et directrice technique"
+          author="Emma Dupont"
         />
         <p className="text-gray-900 mt-2">
           En à peine quelques années, ClicketPaf s’est imposée comme une
@@ -39,7 +40,7 @@ export default async function Page() {
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           2020 : La naissance d’une idée
         </h2>
         <p className="text-gray-900 mt-2">
@@ -53,28 +54,28 @@ export default async function Page() {
           quote="Tout le monde a déjà connu une file d’attente interminable ou un
           terminal de paiement en panne. Nous voulions éliminer ces irritants et
           offrir une solution intuitive et universelle."
-          author="Nous voulions éliminer ces irritants et offrir une solution intuitive
-          et universelle."
+          author="Julien Martin"
+          authorMsg="Julien Martin, co-fondateur et PDG de ClicketPaf"
         />
         <p className="text-gray-900 mt-2">
           En juillet 2020, après plusieurs mois de recherches et de
           brainstorming, les deux entrepreneurs lancent officiellement
           ClicketPaf avec une idée maîtresse : utiliser les smartphones comme
           outil central pour effectuer des paiements{" "}
-          <b className="text-green-500 font-medium">rapides</b>,{" "}
-          <b className="text-green-500 font-medium">sans contact</b> et
-          <b className="text-green-500 font-medium">hautement sécurisés</b>.
+          <b className="text-green-600 font-medium">rapides</b>,{" "}
+          <b className="text-green-600 font-medium">sans contact</b> et
+          <b className="text-green-600 font-medium">hautement sécurisés</b>.
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           Une technologie de pointe au service de tous
         </h2>
         <p className="text-gray-900 mt-2">
           Le cœur de l’application ClicketPaf repose sur une technologie de
           paiement innovante, combinant{" "}
-          <b className="text-green-500 font-medium">cryptage de pointe</b> et{" "}
-          <b className="text-green-500 font-medium">
+          <b className="text-green-600 font-medium">cryptage de pointe</b> et{" "}
+          <b className="text-green-600 font-medium">
             intelligence artificielle
           </b>
           . Grâce à ces avancées, l’application garantit à la fois :
@@ -97,7 +98,7 @@ export default async function Page() {
               </svg>
             </span>
             <span>
-              <b className="text-green-500 font-medium">
+              <b className="text-green-600 font-medium">
                 Une sécurité maximale
               </b>
               , protégeant les données personnelles et bancaires des
@@ -123,7 +124,7 @@ export default async function Page() {
               </svg>
             </span>
             <span>
-              <b className="text-green-500 font-medium">Une vitesse inégalée</b>
+              <b className="text-green-600 font-medium">Une vitesse inégalée</b>
               , permettant de finaliser un paiement en moins de 5 secondes.
             </span>
           </li>
@@ -137,7 +138,7 @@ export default async function Page() {
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           Des chiffres qui parlent
         </h2>
         <p className="text-gray-900 mt-2">
@@ -161,7 +162,7 @@ export default async function Page() {
               </svg>
             </span>
             <span>
-              <b className="text-green-500 font-medium">500 000 utilisateurs</b>
+              <b className="text-green-600 font-medium">500 000 utilisateurs</b>
               , enregistrés en 2023, dont 65 % déclarent utiliser l’application
               quotidiennement.
             </span>
@@ -185,8 +186,8 @@ export default async function Page() {
               </svg>
             </span>
             <span>
-              <b className="text-green-500 font-medium">
-                25 000 commerçants partenaires
+              <b className="text-green-600 font-medium">
+                25 000 commerçants partenaires{" "}
               </b>
               à travers l’Europe, séduits par une solution qui réduit les frais
               de transaction et simplifie leur gestion.
@@ -211,8 +212,8 @@ export default async function Page() {
               </svg>
             </span>
             <span>
-              <b className="text-green-500 font-medium">
-                Un taux de satisfaction client de 98 %
+              <b className="text-green-600 font-medium">
+                Un taux de satisfaction client de 98%{" "}
               </b>
               selon une enquête interne menée en mai 2023.
             </span>
@@ -224,7 +225,7 @@ export default async function Page() {
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           Une équipe soudée, une mission partagée
         </h2>
         <p className="text-gray-900 mt-2">
@@ -236,11 +237,12 @@ export default async function Page() {
           quote="Nous sommes avant tout une famille. Chaque membre de l’équipe partage
           une vision commune : transformer le paiement en une expérience
           positive pour tous."
-          author="affirme Laura Perez, responsable du service client"
+          authorMsg="Affirme Laura Perez, responsable du service client"
+          author="Laura Perez"
         />
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           2022 : L’année des grandes évolutions
         </h2>
         <p className="text-gray-900 mt-2">
@@ -256,14 +258,14 @@ export default async function Page() {
         <p className="text-gray-900 mt-2">
           En parallèle, l’application s’ouvre à de nouveaux marchés en dehors de
           la France, notamment en{" "}
-          <b className="text-green-500 font-medium">Belgique</b>,{" "}
-          <b className="text-green-500 font-medium">Espagne</b> et{" "}
-          <b className="text-green-500 font-medium">Italie</b>, où elle connaît
+          <b className="text-green-600 font-medium">Belgique</b>,{" "}
+          <b className="text-green-600 font-medium">Espagne</b> et{" "}
+          <b className="text-green-600 font-medium">Italie</b>, où elle connaît
           un succès immédiat.{" "}
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           ClicketPaf : Une application, plusieurs usages
         </h2>
         <p className="text-gray-900 mt-2">
@@ -289,7 +291,9 @@ export default async function Page() {
             </svg>
           </span>
           <span>
-            <b className="text-green-500 font-medium">Paiements en magasin :</b>
+            <b className="text-green-600 font-medium">
+              Paiements en magasin :{" "}
+            </b>
             Rapides et sans contact grâce à la technologie NFC.
           </span>
         </li>
@@ -312,7 +316,7 @@ export default async function Page() {
             </svg>
           </span>
           <span>
-            <b className="text-green-500 font-medium">Paiements en ligne : </b>
+            <b className="text-green-600 font-medium">Paiements en ligne : </b>
             En scannant un QR code ou en cliquant sur un lien sécurisé.
           </span>
         </li>
@@ -335,7 +339,7 @@ export default async function Page() {
             </svg>
           </span>
           <span>
-            <b className="text-green-500 font-medium">
+            <b className="text-green-600 font-medium">
               Transferts entre particuliers :{" "}
             </b>
             Parfait pour partager une addition ou rembourser un ami en un clic.
@@ -348,7 +352,7 @@ export default async function Page() {
         </p>
       </section>
       <section className="mt-6">
-        <h2 className="text-xl text-green-600 font-semibold">
+        <h2 className="text-xl text-green-700 font-semibold">
           L’avenir de ClicketPaf
         </h2>
         <p className="text-gray-900 mt-2">
@@ -374,7 +378,7 @@ export default async function Page() {
             </svg>
           </span>
           <span>
-            <b className="text-green-500 font-medium">
+            <b className="text-green-600 font-medium">
               Une carte virtuelle intégrée{" "}
             </b>
             pour les achats en ligne sur des sites non partenaires.
@@ -399,15 +403,15 @@ export default async function Page() {
             </svg>
           </span>
           <span>
-            <b className="text-green-500 font-medium">
-              Un programme de fidélité universel
+            <b className="text-green-600 font-medium">
+              Un programme de fidélité universel{" "}
             </b>
             permettant aux utilisateurs de cumuler des points chez les
             commerçants participants.
           </span>
         </li>
         <li className="flex items-center gap-2">
-          <span className="flex gap-2">
+          <span className="flex gap-2 ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -424,13 +428,15 @@ export default async function Page() {
               <circle cx="12" cy="12" r="1" />
             </svg>
           </span>
-          Une expansion dans de nouveaux marchés en Europe de l’Est et en
-          Scandinavie.
+          <b className="text-green-600 font-medium">
+            Une expansion dans de nouveaux marchés
+          </b>en Europe de l’Est et en Scandinavie.
         </li>
         <Blockquote
           quote="Nous avons pour ambition de devenir l’application de paiement préférée
           en Europe d’ici 2030"
-          author="déclare Julien Martin avec enthousiasme."
+          authorMsg="Déclare Julien Martin avec enthousiasme."
+          author="Julien Martin"
         />
       </section>
     </div>

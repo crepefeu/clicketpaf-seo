@@ -22,7 +22,7 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-lg mb-8"></p>
-        <button className="bg-green-100/50 border border-green-400 text-green-600 px-6 py-2 rounded-full">
+        <button className="bg-green-100/50 border border-green-400 text-green-700 px-6 py-2 rounded-full">
           Commencez maintenant
         </button>
       </section>
@@ -118,7 +118,7 @@ export default function Home() {
 
       <section className="mt-10">
         <div className="flex flex-col items-center gap-4 bg-green-100/50 border border-green-400 px-6 py-8 rounded-lg">
-          <h1 className="text-2xl text-green-600 font-bold">
+          <h1 className="text-2xl text-green-700 font-bold">
             Comment fonctionne Clicketpaf ?
           </h1>
           <p className="text-justify">
@@ -144,7 +144,7 @@ export default function Home() {
             Prêt à simplifier vos paiements ?
           </span>
         </h2>
-        <button className="bg-green-100/50 border border-green-400 text-green-600 px-6 py-2 rounded-full">
+        <button className="bg-green-100/50 border border-green-400 text-green-700 px-6 py-2 rounded-full">
           Contactez-nous maintenant
         </button>
       </section>

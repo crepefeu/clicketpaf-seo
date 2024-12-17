@@ -14,10 +14,10 @@ export default function Footer() {
           <ul className="text-left font-bold">
             <li>
               <Link
-                href="/about"
+                href="/a-propos"
                 className="text-green-700 hover:text-green-800"
               >
-                A propos
+                À propos
               </Link>
             </li>
           </ul>
