@@ -2,7 +2,7 @@ import { getArticleBySlug } from "@/app/lib/articleUtils";
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Couverture de l'article de blog";
+export const alt = "Blog article thumbnail";
 export const size = {
   width: 1200,
   height: 630,
@@ -25,9 +25,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             justifyContent: "center",
           }}
         >
-          <p style={{ color: "#15803d", fontSize: "48px" }}>
-            Article not found
-          </p>
+          <p style={{ color: "#15803d", fontSize: "48px" }}>Article not found</p>
         </div>
       )
     );
@@ -41,22 +39,13 @@ export default async function Image({ params }: { params: { slug: string } }) {
           width: "100%",
           display: "flex",
           flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
           backgroundColor: "#f3f4f6",
           padding: "40px",
         }}
       >
-        <h1
-          style={{
-            fontSize: "60px",
-            color: "#15803d",
-            textAlign: "center",
-            marginBottom: "20px",
-            fontWeight: "bold",
-          }}
-        >
-          Clicketpaf - Le paiement en ligne simplifié
-        </h1>
-        <section
+        <div
           style={{
             display: "flex",
             flexDirection: "column",
@@ -66,16 +55,14 @@ export default async function Image({ params }: { params: { slug: string } }) {
         >
           <h1
             style={{
-              fontSize: "54px",
+              fontSize: "60px",
               color: "#15803d",
               textAlign: "center",
               marginBottom: "20px",
-              fontWeight: "bold",
             }}
           >
             {article.title}
           </h1>
-
           <div
             style={{
               display: "flex",
@@ -85,26 +72,12 @@ export default async function Image({ params }: { params: { slug: string } }) {
             }}
           >
             <p>Par {article.author}</p>
-            <p
-              style={{
-                color: "#6b7280",
-                fontSize: "24px",
-              }}
-            >
-              •
-            </p>
+            <p>•</p>
             <p>{new Date(article.date).toLocaleDateString()}</p>
-            <p
-              style={{
-                color: "#6b7280",
-                fontSize: "24px",
-              }}
-            >
-              •
-            </p>
+            <p>•</p>
             <p>{article.metadata.readingTime}</p>
           </div>
-        </section>
+        </div>
       </div>
     ),
     {

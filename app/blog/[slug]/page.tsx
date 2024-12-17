@@ -23,7 +23,9 @@ export async function generateMetadata({
     }
 
     return {
-      title: article.title,
+      referrer: "origin",
+      publisher: "Clicketpaf",
+      title: `Clicketpaf - ${article.title}`,
       description: article.description,
       alternates: {
         canonical: `/blog/${article.slug}`,
@@ -34,6 +36,12 @@ export async function generateMetadata({
         type: "article",
         publishedTime: article.date,
         authors: [article.author],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: article.title,
+        description: article.description,
+        creator: article.author,
       },
     };
   } catch (error) {
