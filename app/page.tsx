@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 sm:pt-28">
+    <div className="flex flex-col items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 sm:pt-12">
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-4">
@@ -113,6 +113,27 @@ export default function Home() {
             </h2>
             <p>Notre équipe est disponible à tout moment pour vous aider.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <div className="flex flex-col items-center gap-4 bg-green-100/50 border border-green-400 px-6 py-8 rounded-lg">
+          <h1 className="text-2xl text-green-600 font-bold">
+            Comment fonctionne Clicketpaf ?
+          </h1>
+          <p className="text-justify">
+            Clicketpaf, c’est la simplicité à l’état pur. Voici comment ça
+            marche : Téléchargez l’application Clicketpaf sur votre smartphone
+            (disponible sur iOS et Android). <br/> Associez votre compte bancaire ou
+            portefeuille numérique en quelques clics, pour une configuration
+            rapide et intuitive. Choisissez votre méthode : utilisez
+            l’application Clicketpaf ou connectez-vous à l’un de nos boîtiers
+            Clicketpaf pour une utilisation encore plus fluide. <br/> Cliquez et
+            écoutez le PAF ! Votre transaction est validée instantanément,
+            accompagnée de notre fameux son ludique et rassurant. Avec
+            Clicketpaf, chaque étape est pensée pour vous simplifier la vie,
+            sans compromis sur la sécurité ou la performance.
+          </p>
         </div>
       </section>
 
