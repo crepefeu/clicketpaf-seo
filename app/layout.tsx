@@ -33,6 +33,15 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "paiement",
+    "paiement en ligne",
+  ],
 };
 
 export default function RootLayout({
