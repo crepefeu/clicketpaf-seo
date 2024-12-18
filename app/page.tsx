@@ -39,7 +39,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-4">
-          <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
+          <span className="text-green-700 px-2">
             Révolutionnez vos paiements en ligne avec une simplicité{" "}
             <span className="relative text-green-700 underline">inégalée</span>
           </span>
@@ -80,7 +80,7 @@ export default function Home() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-mouse-pointer-click stroke-green-500"
+            className="lucide lucide-mouse-pointer-click stroke-green-700"
           >
             <path d="M14 4.1 12 6" />
             <path d="m5.1 8-2.9-.8" />
@@ -90,7 +90,7 @@ export default function Home() {
           </svg>
           <div>
             <h2 className="text-2xl font-semibold mb-2">
-              <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
+              <span className="text-green-700 px-2">
                 Paiement en un clic
               </span>
             </h2>
@@ -111,7 +111,7 @@ export default function Home() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-file-lock stroke-green-500"
+            className="lucide lucide-file-lock stroke-green-700"
           >
             <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
             <rect width="8" height="6" x="8" y="12" rx="1" />
@@ -119,7 +119,7 @@ export default function Home() {
           </svg>
           <div>
             <h2 className="text-2xl font-semibold mb-2">
-              <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
+              <span className="text-green-700 px-2">
                 Sécurité maximale
               </span>
             </h2>
@@ -140,14 +140,14 @@ export default function Home() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-headset stroke-green-500"
+            className="lucide lucide-headset stroke-green-700"
           >
             <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
             <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
           </svg>
           <div>
             <h2 className="text-2xl font-semibold mb-2">
-              <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
+              <span className="text-green-700 px-2">
                 Support 24/7
               </span>
             </h2>
@@ -180,7 +180,7 @@ export default function Home() {
       {/* Call to Action Section */}
       <section className="text-center mt-16">
         <h2 className="text-3xl font-bold mb-4">
-          <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
+          <span className="text-green-700 px-2">
             Prêt à simplifier vos paiements ?
           </span>
         </h2>
