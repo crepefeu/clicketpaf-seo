@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "paiement",
+    "paiement en ligne",
+  ],
 };
 
 export default function Home() {
@@ -16,9 +25,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold mb-4">
           <span className="bg-gradient-to-r from-green-400 to-green-600 text-transparent bg-clip-text px-2">
             Révolutionnez vos paiements en ligne avec une simplicité{" "}
-            <span className="relative text-green-700 underline">
-              inégalée
-            </span>
+            <span className="relative text-green-700 underline">inégalée</span>
           </span>
         </h1>
         <p className="text-lg mb-8"></p>
@@ -124,15 +131,15 @@ export default function Home() {
           <p className="text-justify">
             Clicketpaf, c’est la simplicité à l’état pur. Voici comment ça
             marche : Téléchargez l’application Clicketpaf sur votre smartphone
-            (disponible sur iOS et Android). <br/> Associez votre compte bancaire ou
-            portefeuille numérique en quelques clics, pour une configuration
-            rapide et intuitive. Choisissez votre méthode : utilisez
-            l’application Clicketpaf ou connectez-vous à l’un de nos boîtiers
-            Clicketpaf pour une utilisation encore plus fluide. <br/> Cliquez et
-            écoutez le PAF ! Votre transaction est validée instantanément,
-            accompagnée de notre fameux son ludique et rassurant. Avec
-            Clicketpaf, chaque étape est pensée pour vous simplifier la vie,
-            sans compromis sur la sécurité ou la performance.
+            (disponible sur iOS et Android). <br /> Associez votre compte
+            bancaire ou portefeuille numérique en quelques clics, pour une
+            configuration rapide et intuitive. Choisissez votre méthode :
+            utilisez l’application Clicketpaf ou connectez-vous à l’un de nos
+            boîtiers Clicketpaf pour une utilisation encore plus fluide. <br />{" "}
+            Cliquez et écoutez le PAF ! Votre transaction est validée
+            instantanément, accompagnée de notre fameux son ludique et
+            rassurant. Avec Clicketpaf, chaque étape est pensée pour vous
+            simplifier la vie, sans compromis sur la sécurité ou la performance.
           </p>
         </div>
       </section>

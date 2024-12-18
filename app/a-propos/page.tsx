@@ -1,5 +1,28 @@
 import Breadcrumbs from "../components/Breadcrumbs";
 import Blockquote from "../components/Blockquote";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "À propos",
+  description:
+    "Découvrez l’histoire et la mission de ClicketPaf, une entreprise innovante qui révolutionne les paiements en ligne avec simplicité, sécurité et efficacité. Apprenez-en plus sur nos valeurs, nos réussites et notre vision pour transformer l’expérience des transactions numériques.",
+  alternates: {
+    canonical: "/a-propos",
+  },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "à propos",
+    "about",
+    "histoire",
+    "entreprise",
+    "paiement en ligne",
+    "paiement",
+  ],
+};
 
 export default async function Page() {
   return (
@@ -430,7 +453,8 @@ export default async function Page() {
           </span>
           <b className="text-green-600 font-medium">
             Une expansion dans de nouveaux marchés
-          </b>en Europe de l’Est et en Scandinavie.
+          </b>
+          en Europe de l’Est et en Scandinavie.
         </li>
         <Blockquote
           quote="Nous avons pour ambition de devenir l’application de paiement préférée
