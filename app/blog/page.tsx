@@ -11,6 +11,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/blog",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "blog",
+    "article",
+    "paiement",
+    "paiement en ligne",
+  ],
 };
 
 export default async function Page() {

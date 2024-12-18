@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "paiement",
+    "paiement en ligne",
+  ],
 };
 
 export default function Home() {
