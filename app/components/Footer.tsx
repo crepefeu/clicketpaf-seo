@@ -4,10 +4,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col bg-green-100 text-white p-8 px-48 pb-20 text-center" role="contentinfo" aria-label="Site footer">
+    <footer
+      className="flex flex-col bg-green-100 text-white p-8 px-48 pb-20 text-center"
+      role="contentinfo"
+      aria-label="Site footer"
+    >
       <div className="w-full h-fit">
         <h1 className="text-green-700 text-2xl font-bold w-fit mr-auto">
-          Clicketpaf - Le paiement en ligne <span className="underline">simplifié</span>
+          Clicketpaf - Le paiement en ligne{" "}
+          <span className="underline">simplifié</span>
         </h1>
       </div>
       <div className="flex justify-between">
@@ -41,11 +46,13 @@ export default function Footer() {
             </ul>
           </div>
           <div className="flex flex-col gap-4 w-fit mt-10">
-            <h2 className="text-xl font-bold text-green-700">Réseaux sociaux</h2>
-            <ul className="text-left font-bold" role="menu">
+            <h2 className="text-xl font-bold text-green-700">
+              Réseaux sociaux
+            </h2>
+            <ul className="flex text-left font-bold items-center gap-3" role="menu">
               <li role="menuitem">
                 <Link
-                  href="https://twitter.com/"
+                  href="https://x.com/click_et_paf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-green-700 hover:text-green-800"
@@ -70,10 +77,42 @@ export default function Footer() {
                   </svg>
                 </Link>
               </li>
+              <li role="menuitem">
+                <Link
+                  href="https://www.instagram.com/click_et_paf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green-700 hover:text-green-800"
+                  aria-label="Suivez-nous sur Instagram"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    role="img"
+                    aria-labelledby="instagram-icon"
+                    className="lucide lucide-instagram"
+                  >
+                    <title id="instagram-icon">Instagram</title>
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </Link>
+              </li>
             </ul>
           </div>
         </nav>
-        <section className="flex flex-col text-left gap-2" aria-label="Newsletter subscription">
+        <section
+          className="flex flex-col text-left gap-2"
+          aria-label="Newsletter subscription"
+        >
           <div>
             <h2 className="text-xl text-green-700 font-bold">
               S&apos;abonner à la newsletter
