@@ -120,7 +120,7 @@ export default function Footer() {
             <h2 className="text-xl text-green-700 font-bold">
               S&apos;abonner à la newsletter
             </h2>
-            <p className="text-green-700 text-opacity-80">
+            <p className="text-green-700">
               Recevez les dernières actualités et mises à jour
             </p>
           </div>
@@ -141,7 +141,7 @@ export default function Footer() {
       </div>
       <div className="w-full h-[1px] bg-green-600 mt-8 md:mt-12"></div>
       <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 mt-6">
-        <p className="text-center sm:text-left text-green-700 text-opacity-80 w-full sm:w-fit text-sm">
+        <p className="text-center sm:text-left text-green-700 w-full sm:w-fit text-sm">
           &copy; 2024 Clicketpaf. Tous droits réservés.
         </p>
         <div className="flex flex-wrap justify-center gap-4 items-center sm:ml-auto text-sm">
