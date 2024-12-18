@@ -16,6 +16,17 @@ export const metadata: Metadata = {
     url: "https://clicketpaf.com/politique-de-confidentialite",
     type: "website",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "politique de confidentialité",
+    "protection des données",
+    "RGPD",
+    "vie privée",
+  ],
 };
 
 export default function Page() {

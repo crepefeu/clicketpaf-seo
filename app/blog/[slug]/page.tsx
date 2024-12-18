@@ -44,6 +44,19 @@ export async function generateMetadata({
         description: article.description,
         creator: article.author,
       },
+      keywords: [
+        "click et paf",
+        "click & paf",
+        "click",
+        "paf",
+        "ClicketPaf",
+        "blog",
+        "article",
+        "paiement",
+        "paiement en ligne",
+        "actualité",
+        "innovation"
+      ]
     };
   } catch (error) {
     console.error("Error generating metadata:", error);

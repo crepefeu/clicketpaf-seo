@@ -17,6 +17,16 @@ export const metadata: Metadata = {
     url: "https://clicketpaf.com/conditions-generales-utilisation",
     type: "website",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "CGU",
+    "conditions générales d'utilisation",
+    "paiement en ligne",
+  ],
 };
 
 export default function Page() {

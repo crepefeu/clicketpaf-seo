@@ -15,6 +15,17 @@ export const metadata: Metadata = {
     url: "https://clicketpaf.com/mentions-legales",
     type: "website",
   },
+  keywords: [
+    "click et paf",
+    "click & paf",
+    "click",
+    "paf",
+    "ClicketPaf",
+    "mentions légales",
+    "informations juridiques",
+    "entreprise",
+    "responsabilité",
+  ],
 };
 
 export default function Page() {
