@@ -124,7 +124,7 @@ export default function Footer() {
               Recevez les dernières actualités et mises à jour
             </p>
           </div>
-          <form onSubmit={(e) => e.preventDefault()} role="form">
+          <form onSubmit={(e) => e.preventDefault()}>
             <label htmlFor="newsletter-email" className="sr-only">
               Adresse email pour la newsletter
             </label>
