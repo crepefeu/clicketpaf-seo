@@ -1,11 +1,13 @@
 // types/article.ts
 export type Section = {
-  type: "heading" | "paragraph" | "list";
+  type: "heading" | "paragraph" | "list" | "blockquote";
   content?: string;
   level?: number;
   style?: string;
   items?: string[];
   emphasis?: boolean;
+  author?: string;
+  authorMsg?: string;
 };
 
 export type Article = {
