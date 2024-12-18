@@ -89,7 +89,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
           ${
             section.style === "lead" ? "text-green-700 font-medium text-lg" : ""
           }
-          ${section.emphasis ? "text-green-500 font-medium" : ""}`}
+          ${section.emphasis ? "text-green-700 font-medium" : ""}`}
         >
           {section.content}
         </p>
