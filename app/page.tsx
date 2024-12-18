@@ -15,6 +15,22 @@ export const metadata: Metadata = {
     "paiement",
     "paiement en ligne",
   ],
+  openGraph: {
+    title: "Accueil | Clicketpaf",
+    description: "Découvrez comment Clicketpaf révolutionne le paiement en ligne",
+    url: "/",
+    siteName: "Clicketpaf",
+    images: [
+      {
+        url: "/og-image.png", // Make sure to add this image to your public folder
+        width: 1200,
+        height: 630,
+        alt: "Clicketpaf - Solution de paiement en ligne",
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function Home() {
