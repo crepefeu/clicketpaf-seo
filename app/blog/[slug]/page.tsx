@@ -5,6 +5,7 @@ import { Metadata } from "next";
 import { JsonLd } from "@/app/components/JsonLd";
 import Link from "next/link";
 import NotFound from "@/app/not-found";
+import Blockquote from "@/app/components/Blockquote";
 
 export async function generateMetadata({
   params: paramsPromise, // Rename to indicate it's a promise
@@ -38,7 +39,7 @@ export async function generateMetadata({
         authors: [article.author],
       },
       twitter: {
-        card: 'summary_large_image',
+        card: "summary_large_image",
         title: article.title,
         description: article.description,
         creator: article.author,
@@ -58,7 +59,12 @@ const SectionRenderer = ({ section }: { section: Section }) => {
     case "heading":
       const HeadingTag = `h${section.level}` as keyof JSX.IntrinsicElements;
       return (
-        <HeadingTag className="text-green-700 font-semibold text-[28px]">
+        <HeadingTag
+          className={`text-green-700 font-semibold
+          ${section.level === 2 ? "text-2xl mt-6" : ""}
+          ${section.level === 3 ? "text-lg mt-4" : ""}
+        `}
+        >
           {section.content}
         </HeadingTag>
       );
@@ -66,7 +72,7 @@ const SectionRenderer = ({ section }: { section: Section }) => {
     case "paragraph":
       return (
         <p
-          className={`mt-4
+          className={`mt-4 text-justify
           ${
             section.style === "lead" ? "text-green-700 font-medium text-lg" : ""
           }
@@ -102,6 +108,15 @@ const SectionRenderer = ({ section }: { section: Section }) => {
             </li>
           ))}
         </ul>
+      );
+
+    case "blockquote":
+      return (
+        <Blockquote
+          quote={section.content ?? ""}
+          authorMsg={section.authorMsg ?? ""}
+          author={section.author ?? ""}
+        />
       );
 
     default:
