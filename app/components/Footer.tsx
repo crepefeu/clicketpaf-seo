@@ -5,19 +5,19 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer
-      className="flex flex-col bg-green-100 text-white p-8 px-48 pb-20 text-center"
+      className="flex flex-col bg-green-100 text-white p-4 sm:p-6 md:p-8 md:px-12 lg:px-48 pb-10 text-center"
       role="contentinfo"
       aria-label="Site footer"
     >
       <div className="w-full h-fit">
-        <h1 className="text-green-700 text-2xl font-bold w-fit mr-auto">
+        <h1 className="text-green-700 text-xl sm:text-2xl font-bold w-fit mr-auto">
           Clicketpaf - Le paiement en ligne{" "}
           <span className="underline">simplifié</span>
         </h1>
       </div>
-      <div className="flex justify-between">
-        <nav className="flex gap-24" aria-label="Footer navigation">
-          <div className="flex flex-col gap-4 w-fit mt-10">
+      <div className="flex flex-col lg:flex-row lg:justify-between gap-8">
+        <nav className="flex flex-col sm:flex-row gap-8 sm:gap-12 lg:gap-16" aria-label="Footer navigation">
+          <div className="flex flex-col gap-4 w-fit mt-5 md:mt-10">
             <h2 className="text-xl font-bold text-green-700">Informations</h2>
             <ul className="text-left font-bold" role="menu">
               <li role="menuitem">
@@ -31,7 +31,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4 w-fit mt-10">
+          <div className="flex flex-col gap-4 w-fit mt-5 md:mt-10">
             <h2 className="text-xl font-bold text-green-700">Actualité</h2>
             <ul className="text-left font-bold" role="menu">
               <li role="menuitem">
@@ -45,11 +45,14 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col gap-4 w-fit mt-10">
+          <div className="flex flex-col gap-4 w-fit mt-5 md:mt-10">
             <h2 className="text-xl font-bold text-green-700">
               Réseaux sociaux
             </h2>
-            <ul className="flex text-left font-bold items-center gap-3" role="menu">
+            <ul
+              className="flex text-left font-bold items-center gap-3"
+              role="menu"
+            >
               <li role="menuitem">
                 <Link
                   href="https://x.com/click_et_paf"
@@ -135,6 +138,35 @@ export default function Footer() {
             />
           </form>
         </section>
+      </div>
+      <div className="w-full h-[1px] bg-green-600 mt-8 md:mt-12"></div>
+      <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-0 mt-6">
+        <p className="text-center sm:text-left text-green-700 text-opacity-80 w-full sm:w-fit text-sm">
+          &copy; 2024 Clicketpaf. Tous droits réservés.
+        </p>
+        <div className="flex flex-wrap justify-center gap-4 items-center sm:ml-auto text-sm">
+          <Link
+            href="/mentions-legales"
+            className="text-green-700 hover:text-green-800"
+            title="Accéder aux mentions légales"
+          >
+            Mentions légales
+          </Link>
+          <Link
+            href="/politique-de-confidentialite"
+            className="text-green-700 hover:text-green-800"
+            title="Accéder à la politique de confidentialité"
+          >
+            Confidentialité
+          </Link>
+          <Link
+            href="/conditions-generales-utilisation"
+            className="text-green-700 hover:text-green-800"
+            title="Accéder à la politique de confidentialité"
+          >
+            CGU
+          </Link>
+        </div>
       </div>
     </footer>
   );
