@@ -2751,7 +2751,7 @@
         },
         {
           "type": "image",
-          "url": "/images/security-stats.jpg",
+          "url": "/images/security-stats.png",
           "alt": "Statistiques de sécurité Clicketpaf",
           "caption": "Notre bilan de sécurité en chiffres"
         },
