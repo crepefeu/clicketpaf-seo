@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Accueil",
+  title: "Accueil | Clicketpaf",
   description: "Découvrez comment Clicketpaf révolutionne le paiement en ligne",
   alternates: {
     canonical: "/",
