@@ -1,6 +1,6 @@
 // types/article.ts
 export type Section = {
-  type: "heading" | "paragraph" | "list" | "blockquote";
+  type: "heading" | "paragraph" | "list" | "blockquote" | "image";
   content?: string;
   level?: number;
   style?: string;
@@ -8,6 +8,9 @@ export type Section = {
   emphasis?: boolean;
   author?: string;
   authorMsg?: string;
+  url?: string;
+  alt?: string;
+  caption?: string;
 };
 
 export type Article = {
@@ -23,4 +26,10 @@ export type Article = {
     readingTime: string;
     category: string;
   };
+  images?: {
+    url: string;
+    alt: string;
+    caption: string;
+  }[];
+  featuredImage?: string;
 };

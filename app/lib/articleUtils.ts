@@ -6,5 +6,5 @@ export function getArticleBySlug(slug: string): Article {
 }
 
 export function getAllArticles() {
-    return articles.articles
+    return articles.articles as Article[]
 }

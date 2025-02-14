@@ -3,6 +3,7 @@ import { getAllArticles } from "@/app/lib/articleUtils";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Metadata } from "next";
 import { JsonLd } from "../components/JsonLd";
+import { Article } from "../types/article";
 
 export const metadata: Metadata = {
   title: "Articles",
@@ -45,7 +46,7 @@ export default async function Page() {
       />
       <h1 className="text-green-700 font-semibold text-2xl">Articles</h1>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 mt-5">
-        {articles.map((article) => (
+        {articles.map((article: Article) => (
           <article
             key={article.id}
             className="bg-white hover:bg-green-100/25 border-[1.5px] border-gray-400 hover:border-green-500 p-4 rounded-lg cursor-pointer transition-colors"

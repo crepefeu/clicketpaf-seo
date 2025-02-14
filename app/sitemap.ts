@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllArticles } from "@/app/lib/articleUtils";
+import { Article } from "./types/article";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const articles = getAllArticles();
@@ -50,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   // Article routes
-  const articleRoutes = articles.map((article) => ({
+  const articleRoutes = articles.map((article: Article) => ({
     url: `${baseUrl}/blog/${article.slug}`,
     lastModified: new Date(article.date), // Use actual article date
     changeFrequency: new Date(article.date) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)

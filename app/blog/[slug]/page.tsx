@@ -6,6 +6,7 @@ import { JsonLd } from "@/app/components/JsonLd";
 import Link from "next/link";
 import NotFound from "@/app/not-found";
 import Blockquote from "@/app/components/Blockquote";
+import ArticleImage from '@/app/components/ArticleImage';
 
 export async function generateMetadata({
   params: paramsPromise, // Rename to indicate it's a promise
@@ -132,6 +133,15 @@ const SectionRenderer = ({ section }: { section: Section }) => {
         />
       );
 
+    case "image":
+      return (
+        <ArticleImage
+          src={section.url || '/images/placeholder.png'}
+          alt={section.alt || 'Image'}
+          caption={section.caption}
+        />
+      );
+
     default:
       return null;
   }
@@ -155,11 +165,20 @@ export default async function Page({
       "@type": "Article",
       headline: article.title,
       description: article.description,
+      image: article.featuredImage,
       author: {
         "@type": "Person",
-        name: article.author,
+        name: article.author
       },
       datePublished: article.date,
+      publisher: {
+        "@type": "Organization",
+        name: "Clicketpaf",
+        logo: {
+          "@type": "ImageObject",
+          url: "/logo.png"
+        }
+      }
     };
 
     return (
